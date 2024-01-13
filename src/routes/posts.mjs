@@ -1,13 +1,23 @@
 import { Router } from "express";
+import { 
+    getPosts,
+    getPost,
+    createPost,
+    updatePost,
+    deletePost
+
+} from "../controllers/postController.mjs";
 
 const router = Router();
 
-router.get("/api/v1/posts", (request, response) => {});
+router.get("/api/v1/posts", getPosts);
 
-router.get("/api/v1/posts/:postId", (request, response) => {});
+router.post("/api/v1/posts", createPost);
 
-router.put("/api/v1/posts/:postId", (request, response) => {});
+router.get("/api/v1/posts/:postId", getPost);
 
-router.delete("/api/v1/posts/:postId", (request, response) => {});
+router.put("/api/v1/posts/:postId", updatePost);
+
+router.delete("/api/v1/posts/:postId", deletePost);
 
 export default router;
