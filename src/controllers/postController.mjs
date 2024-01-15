@@ -1,12 +1,24 @@
-const getPosts = ((request, response) => {});
+import * as postService from "../services/postService.mjs";
 
-const getPost = ((request, response) => {});
+const getPosts = ((request, response) => {
+    return postService.getPosts(request, response);
+});
 
-const createPost = ((request, response) => {});
+const getPost = ((request, response) => {
+    return postService.getPost(request, response);
+});
 
-const updatePost = ((request, response) => {});
+const createPost = ((request, response) => {
+    return postService.createPost(request, response);
+});
 
-const deletePost = ((request, response) => {});
+const updatePost = ((request, response) => {
+    return postService.updatePost(request, response);
+});
+
+const deletePost = ((request, response) => {
+    return postService.deletePost(request, response);
+});
 
 module.exports = {
     getPosts,
