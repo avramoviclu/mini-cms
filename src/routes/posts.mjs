@@ -1,23 +1,16 @@
 import { Router } from "express";
-import { 
-    getPosts,
-    getPost,
-    createPost,
-    updatePost,
-    deletePost
-
-} from "../controllers/postController.mjs";
+import PostController from "../controllers/postController.mjs";
 
 const router = Router();
 
-router.get("/api/v1/posts", getPosts);
+router.get("/api/v1/posts", PostController.getPosts);
 
-router.post("/api/v1/posts", createPost);
+router.post("/api/v1/posts", PostController.createPost);
 
-router.get("/api/v1/posts/:postId", getPost);
+router.get("/api/v1/posts/:postId", PostController.getPost);
 
-router.put("/api/v1/posts/:postId", updatePost);
+router.put("/api/v1/posts/:postId", PostController.updatePost);
 
-router.delete("/api/v1/posts/:postId", deletePost);
+router.delete("/api/v1/posts/:postId", PostController.deletePost);
 
 export default router;
