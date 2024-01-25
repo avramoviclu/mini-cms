@@ -1,23 +1,23 @@
 import PostService from "../services/postService.mjs";
 
 class PostController {
-    static getPosts(request, response) {
+    getPosts = (request, response) => {
         return PostService.getPosts(request, response);
     }
 
-    static getPost(request, response) {
+    getPost = (request, response) => {
         return PostService.getPost(request, response);
     }
 
-    static createPost(request, response) {
+    createPost = (request, response) => {
         return PostService.createPost(request, response);
     }
 
-    static updatePost(request, response) {
+    updatePost = (request, response) => {
         return PostService.updatePost(request, response);
     }
 
-    static deletePost(request, response) {
+    deletePost = (request, response) => {
         return PostService.deletePost(request, response);
     }
 }
