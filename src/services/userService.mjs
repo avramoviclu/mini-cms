@@ -1,26 +1,35 @@
-const getUsers = ((request, response) => {});
+class UserService {
+    getUsers = (request, response) => {
+        //TODO: Finish method implementation        
+    };
 
-const getUser = ((request, response) => {});
+    getUser = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const createUser = ((request, response) => {});
+    createUser = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const updateUser = ((request, response) => {});
+    updateUser = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const deleteUser = ((request, response) => {});
+    deleteUser = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const acceptInvitation = ((request, response) => {});
+    acceptInvitation = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const getInvitation = ((request, response) => {});
+    getInvitation = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const createInvitation = ((request, response) => {});
-
-module.exports = {
-    getUsers,
-    getUser,
-    createUser,
-    updateUser,
-    deleteUser,
-    acceptInvitation,
-    getInvitation,
-    createInvitation
+    createInvitation = (request, response) => {
+        //TODO: Finish method implementation
+    };
 }
+
+export default UserService;

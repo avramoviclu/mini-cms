@@ -1,17 +1,23 @@
-const getPosts = ((request, response) => {});
+class PostService {
+    getPosts = (request, response) => {
+        //TODO: Finish method implementation        
+    };
 
-const getPost = ((request, response) => {});
+    getPost = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const createPost = ((request, response) => {});
+    createPost = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const updatePost = ((request, response) => {});
+    updatePost = (request, response) => {
+        //TODO: Finish method implementation
+    };
 
-const deletePost = ((request, response) => {});
-
-module.exports = {
-    getPosts,
-    getPost,
-    createPost,
-    updatePost,
-    deletePost
+    deletePost = (request, response) => {
+        //TODO: Finish method implementation
+    };
 }
+
+export default PostService;
