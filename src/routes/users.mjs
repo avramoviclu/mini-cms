@@ -1,32 +1,23 @@
 import { Router } from "express";
 
-import { 
-    getUsers,
-    getUser,
-    createUser,
-    updateUser,
-    deleteUser,
-    acceptInvitation,
-    getInvitation,
-    createInvitation
-} from "../controllers/userController.mjs";
+import UserController from "../controllers/userController.mjs";
 
 const router = Router();
 
-router.get("/api/v1/admin/users", getUsers);
+router.get("/api/v1/admin/users", UserController.getUsers);
 
-router.post("/api/v1/admin/users", createUser);
+router.post("/api/v1/admin/users", UserController.createUser);
 
-router.get("/api/v1/admin/users/:userId", getUser);
+router.get("/api/v1/admin/users/:userId", UserController.getUser);
 
-router.put("/api/v1/admin/users/:userId", updateUser);
+router.put("/api/v1/admin/users/:userId", UserController.updateUser);
 
-router.delete("/api/v1/admin/users/:userId", deleteUser);
+router.delete("/api/v1/admin/users/:userId", UserController.deleteUser);
 
-router.post("/api/v1/users/invites/:invitationId", acceptInvitation);
+router.post("/api/v1/users/invites/:invitationId", UserController.acceptInvitation);
 
-router.get("/api/v1/users/invites/:invitationId", getInvitation);
+router.get("/api/v1/users/invites/:invitationId", UserController.getInvitation);
 
-router.post("/api/v1/admin/users/invites", createInvitation);
+router.post("/api/v1/admin/users/invites", UserController.createInvitation);
 
 export default router;
