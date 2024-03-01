@@ -1,16 +1,18 @@
-import pg from "pg";
-const { Pool } = pg;
+import sqlite3 from 'sqlite3';
 
-class Db {
-    pool = () => {
-        return new Pool({
-            user: process.env.DB_USERNAME,
-            host: process.env.DB_HOST,
-            database: process.env.DB_NAME,
-            password: process.env.DB_PASSWORD,
-            port: process.env.DB_PORT
-        });
+const { verbose } = sqlite3;
+
+const db = new (verbose().Database)('./sqlite/mini-cms.db', (err) => {
+    if (err) {
+        console.error('Error opening database', err);
+    } else {
+        console.log('Database connected');
+        db.run(`CREATE TABLE IF NOT EXISTS posts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            content TEXT NOT NULL
+        )`);
     }
-}
+});
 
-export default Db;
+export default db;
