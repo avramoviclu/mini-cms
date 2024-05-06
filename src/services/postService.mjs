@@ -47,6 +47,15 @@ class PostService {
             });
         });
     }
+
+    static getPostsByTag(id) {
+        return new Promise((resolve, reject) => {
+            db.get("SELECT p.*, t.name FROM posts p JOIN post_tag pt ON p.id=pt.post_id JOIN tags t ON pt.tag_id=t.id WHERE pt.tag_id=?", [id], (err, rows) => {
+                if (err) reject(err);
+                else resolve(rows);
+            });
+        });
+    }
 }
 
 export default PostService;

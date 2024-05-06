@@ -15,7 +15,7 @@ const db = new (verbose().Database)('./sqlite/mini-cms.db', (err) => {
 
         db.run(`CREATE TABLE IF NOT EXISTS tags (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
+            name TEXT NOT NULL,
             description TEXT NOT NULL
         )`);
 
