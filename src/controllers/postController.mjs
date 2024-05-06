@@ -1,4 +1,4 @@
-import PostService from '../services/PostService.mjs';
+import PostService from '../services/postService.mjs';
 
 class PostController {
     static getPosts = async (request, response) => {

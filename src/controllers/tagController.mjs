@@ -1,4 +1,4 @@
-import TagService from '../services/TagService.mjs';
+import TagService from '../services/tagService.mjs';
 
 class TagController {
     static getTags = async (request, response) => {
