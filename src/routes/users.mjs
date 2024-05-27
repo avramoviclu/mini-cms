@@ -14,10 +14,10 @@ router.put("/api/v1/admin/users/:userId", UserController.updateUser);
 
 router.delete("/api/v1/admin/users/:userId", UserController.deleteUser);
 
-router.post("/api/v1/users/invites/:invitationId", UserController.acceptInvitation);
+// router.post("/api/v1/users/invites/:invitationId", UserController.acceptInvitation);
 
-router.get("/api/v1/users/invites/:invitationId", UserController.getInvitation);
+// router.get("/api/v1/users/invites/:invitationId", UserController.getInvitation);
 
-router.post("/api/v1/admin/users/invites", UserController.createInvitation);
+// router.post("/api/v1/admin/users/invites", UserController.createInvitation);
 
 export default router;

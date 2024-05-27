@@ -32,7 +32,7 @@ class TagController {
         }
     }
 
-    static updatePost = async (request, response) => {
+    static updateTag = async (request, response) => {
         try {
             const updatedTag = await TagService.updateTag(request.params.id, request.body);
             response.json(updatedTag);

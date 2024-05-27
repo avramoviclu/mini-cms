@@ -49,4 +49,4 @@ class TagService {
     }
 }
 
-export default PostService;
+export default TagService;

@@ -51,4 +51,4 @@ class UserController {
     }
 }
 
-export default PostController;
+export default UserController;
