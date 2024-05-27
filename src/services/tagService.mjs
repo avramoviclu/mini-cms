@@ -21,20 +21,20 @@ class TagService {
 
     static createTag(tagData) {
         return new Promise((resolve, reject) => {
-            const { title, content } = tagData;
-            db.run("INSERT INTO tags (title, content) VALUES (?, ?)", [title, content], function(err) {
+            const { name, description } = tagData;
+            db.run("INSERT INTO tags (name, description) VALUES (?, ?)", [name, description], function(err) {
                 if (err) reject(err);
-                else resolve({ id: this.lastID, ...postData });
+                else resolve({ id: this.lastID, ...tagData });
             });
         });
     }
 
     static updateTag(id, tagData) {
         return new Promise((resolve, reject) => {
-            const { title, content } = postData;
-            db.run("UPDATE tags SET title = ?, content = ? WHERE id = ?", [title, content, id], function(err) {
+            const { name, description } = tagData;
+            db.run("UPDATE tags SET title = ?, content = ? WHERE id = ?", [name, description, id], function(err) {
                 if (err) reject(err);
-                else resolve({ id, ...postData });
+                else resolve({ id, ...tagData });
             });
         });
     }
